@@ -1,54 +1,12 @@
-import java.util.Scanner;
+import java.util.Scanner; // mengimpor class scanner untuk membaca input pengguna
 
-class Admin {
-    private String username;
-    private String password;
-
-    public Admin(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
-    public void login(String inputUsername, String inputPassword) {
-        if (inputUsername.equals(username) && inputPassword.equals(password)) {
-            System.out.println("Login Admin berhasil!");
-        } else {
-            System.out.println("Username atau password salah!");
-        }
-    }
-}
-
-class Mahasiswa {
-    private String nama;
-    private String nim;
-
-    public Mahasiswa(String nama, String nim) {
-        this.nama = nama;
-        this.nim = nim;
-    }
-
-    public void login(String inputNama, String inputNim) {
-        if (inputNama.equals(nama) && inputNim.equals(nim)) {
-            System.out.println("Login Mahasiswa berhasil!");
-            System.out.println(displayInfo());
-        } else {
-            System.out.println("Nama atau NIM salah!");
-        }
-    }
-
-    public String displayInfo() {
-        return "Nama: " + nama + ", NIM: " + nim;
-    }
-}
-
-
-public class LoginSystem {
+public class LoginSystem { // konstruktor untuk membuat objek admin dan mahasiswa dengan data tetap
     private Admin admin;
     private Mahasiswa mahasiswa;
 
     public LoginSystem() {
-        admin = new Admin("admin", "pasieniki");
-        mahasiswa = new Mahasiswa("zeta", "108");
+        admin = new Admin("niki", "backburner");
+        mahasiswa = new Mahasiswa("dilla", "065");
     }
 
     public void showMenu() {
